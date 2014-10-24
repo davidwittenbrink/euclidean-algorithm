@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="euklidCalculator">
+    <head>
+        <meta charset="utf-8" />
+        <title>Euklidischer Algorithmus</title>
+        <meta property="og:title" content="Euklidischen Algorithmus online berechnen" />
+        <meta property="og:description" content="Ein Rechner für den Euklidischen Algorithmus." />
+        <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="euklid.css">
+        <link rel="icon" href="graphics/favicon.png" type="image/png">
+        <link rel="shortcut icon" type="image/png" href="graphics/favicon.png" />
+        <link type="image/png" href="graphics/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="euklid.js"></script>
+        <script src="controllers.js"></script>
+    </head>
+    <body ng-controller="EuklidCtrl">
+        <div id="fb-root"></div>
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1400819346859700";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div id="wrapper">
+            <div id="content">
+                <h1>Euklidischer Algorithmus</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>i</th>
+                            <th ng-repeat="n in result.i track by $index">{{ n }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>ai</th>
+                            <td ng-repeat="n in result.ai track by $index">{{ n }}</td>
+                        </tr>
+                        <tr>
+                            <th>bi</th>
+                            <td ng-repeat="n in result.bi track by $index">{{ n }}</td>
+                        </tr>
+                        <tr>
+                            <th>qi</th>
+                            <td ng-repeat="n in result.qi track by $index">{{ n }}</td>
+                        </tr>
+                        <tr>
+                            <th>ri</th>
+                            <td><input ng-model="nx" ng-change="inputChanged(nx, ny)" type="number" value="{{ result.ri[0] }}"></td>
+                            <td><input ng-model="ny" ng-change="inputChanged(nx, ny)" type="number" value="{{ result.ri[1] }}"></td>
+                            <td ng-repeat="n in result.ri.slice(2) track by $index">{{ n }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="fb-like-button">
+                    <div class="fb-like" data-href="https://euklidischer-algorithmus.appspot.com" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                </div>
+                <div id="g-plus-one-button">
+                    <div class="g-plusone" data-annotation="none"></div>
+                </div>
+                
+            </div> <!-- end content -->
+            <footer>
+                <a href="https://plus.google.com/+DavidWittenbrink">David Wittenbrink</a>
+                <script type="text/javascript">
+                    window.___gcfg = {lang: 'de'};
+            
+                    (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/platform.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </footer>
+        </div> <!-- end wrapper -->
+    </body>
+</html>

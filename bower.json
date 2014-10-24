@@ -1,0 +1,26 @@
+{
+  "name": "euklidischer-algorithmus",
+  "main": "euklid.html",
+  "version": "1.0",
+  "authors": [
+    "David Wittenbrink <david.wittenbrink@gmail.com>"
+  ],
+  "description": "A simple webapp to calculate the euclidian algorithm.",
+  "keywords": [
+    "euclidean",
+    "algorithm",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "https://euklidischer-algorithmus.appspot.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0"
+  }
+}

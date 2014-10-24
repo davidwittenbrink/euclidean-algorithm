@@ -1,0 +1,100 @@
+* { 
+    box-sizing: border-box; 
+}
+
+h1 {
+    font-family: 'Cardo', serif;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {text-align: center; font-size: 46px; margin-top: 40px}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+td, input {font-weight: 300;}
+th {font-weight: 400; font-style: italic;}
+th, td {
+    border-right: 1px black solid;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    text-align: center;
+    vertical-align: bottom;
+}
+tr {
+    border-bottom: 1px solid black;
+}
+tbody tr:last-child {
+    border-bottom: none;
+}
+table {
+    margin: 60px auto;
+    border-collapse: collapse;
+}
+
+input {
+    font-size: inherit;
+    font: inherit;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background-color: #e5e5e5;
+}
+
+tr td:last-child, tr th:last-child {
+    border-right: none;
+}
+
+#content {
+    width: 300px;
+    margin: 0 auto;
+}
+#wrapper {
+    width: 100%;
+}
+
+footer {text-align: center; position: absolute; bottom: 3%; width: 100%;}
+
+footer a {
+    text-decoration: none;
+    font-size: 0.7em;
+    width: 100%;
+    color: #0099cc;
+}
+
+#fb-like-button {
+    display: inline-block;
+}
+
+#g-plus-one-button {
+    display: inline-block;
+    float: right;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+    and (min-width : 1224px) {
+    #content { width: 500px; }
+}
+@media only screen 
+    and (max-height : 420px) {
+    footer { display:none; }
+}
+
